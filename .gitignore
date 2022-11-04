@@ -3,15 +3,14 @@
 *.pyc
 __pycache__
 *.egg-info
-/static
-static/
+
 env/
 out/
 awscli*.zip
 terraform*.zip
 # Local .terraform directories
 **/.terraform/*
-
+mysite/static
 # .tfstate files
 *.tfstate
 *.tfstate.*
