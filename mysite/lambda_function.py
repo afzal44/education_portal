@@ -9,7 +9,7 @@ def hello(event, context):
         install_secrets()
 
     return {
-        'message': 'Hello from the Wagtail Lambda Demo',
+        'message': 'Hello from the Education Portal Lambda Demo',
         'event': event,
         'context': repr(context),
     }

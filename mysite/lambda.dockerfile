@@ -23,12 +23,10 @@ RUN venv/bin/pip install \
 
 # Create lambda_venv_path.py
 RUN INSTBASE=${INSTBASE} venv/bin/python -c \
-    'import os; import sys; instbase = os.environ["INSTBASE"]; print("import sys; sys.path[:0] = %s" % [p for p in sys.path if p.startswith(instbase)])' \
-    > ${INSTBASE}/lambda_venv_path.py
+	'import os; import sys; instbase = os.environ["INSTBASE"]; print("import sys; sys.path[:0] = %s" % [p for p in sys.path if p.startswith(instbase)])' \
+	> ${INSTBASE}/lambda_venv_path.py
 
-COPY blog blog
-COPY home home
-COPY search search
+COPY account account
 COPY mysite mysite
 COPY static static
 

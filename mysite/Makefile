@@ -10,6 +10,6 @@ out/lambda.zip: lambda.dockerfile lambda_function.py requirements.txt mysite/set
 
 upload-static: static/staticfiles.json
 	aws s3 sync static "s3://$(shell cd tf; terraform output -raw static_bucket)/s" \
-		--exclude staticfiles.json --delete
+		--exclude staticfiles.json --delete --profile django
 
 .PHONY: default upload-static

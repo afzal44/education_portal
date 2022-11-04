@@ -16,4 +16,5 @@ output rds_master_credentials_arn {
 
 output init_superuser_password {
   value = random_password.init_superuser_password.result
+  sensitive = true
 }
